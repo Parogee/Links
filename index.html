@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Periapses</title>
+<meta name="description" content="Where all these links orbit around the platform closest to you.">
+<meta property="og:title" content="Periapses">
+<meta property="og:url" content="https://periapses.com/">
+<meta property="og:image" content="https://periapses.com/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://periapses.com/og-image.jpg">
+<meta property="og:description" content="Where all these links orbit around the platform closest to you.">
+<meta name="theme-color" content="#04070f">
+<!-- Favicon: your actual logo, baked straight into this file so it needs
+     no separate request. Setting PLANET_IMAGE below does not affect it. -->
+<link id="favicon" rel="icon" type="image/png" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="icon-180.png">
+
+<style>
+/* ══════════════════════════════════════════════════════════════════
+   PERIAPSES — orbital link station
+   Everything you'd normally want to change lives in the CONFIG block
+   inside the <script> tag at the bottom of this file. Look for the
+   big "EDIT YOUR LINKS HERE" banner.
+   ══════════════════════════════════════════════════════════════════ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:        #04070f;
+  --deep:       #061225;
+  --blue:       #2f7fd4;
+  --blue-lt:    #7cc4ff;
+  --blue-glow:  rgba(76, 163, 255, .55);
+  --text:       #e8f2ff;
+  --muted:      rgba(196, 219, 245, .62);
+  --hair:       rgba(124, 196, 255, .22);
+  --accent:     #4ca3ff;        /* overridden per-link at runtime */
+  --font: "Space Grotesk", "Segoe UI", -apple-system, BlinkMacSystemFont, Inter, system-ui, sans-serif;
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Code", Consolas, monospace;
+}
+
+html { scroll-behavior: auto; background: var(--ink); }
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--ink);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* The page is tall on purpose — its height is what you scroll through
+   to advance the orbit. It's set from JS based on how many links exist. */
+#scrollTrack { width: 1px; pointer-events: none; }
+
+/* ─────────────────────────────  DEEP SPACE  ───────────────────────── */
+
+.sky {
+  position: fixed; inset: 0; z-index: 0; overflow: hidden;
+  background:
+    radial-gradient(120% 90% at 78% 18%,  rgba(29, 92, 168, .30) 0%, transparent 55%),
+    radial-gradient(100% 80% at 12% 82%,  rgba(20, 74, 140, .26) 0%, transparent 58%),
+    radial-gradient(70%  70% at 50% 50%,  rgba(12, 45, 92,  .34) 0%, transparent 70%),
+    linear-gradient(#04070f 0%, #061428 45%, #04080f 100%);
+}
+
+#stars { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+/* the long sweeping light trails from the brand art */
+.trails { position: absolute; inset: -12% -8%; width: 116%; height: 124%; opacity: .85; }
+.trails path { fill: none; stroke-linecap: round; }
+
+.vignette {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(76% 66% at 50% 48%, transparent 42%, rgba(2,5,12,.62) 82%, rgba(2,5,12,.9) 100%);
+}
+
+/* ─────────────────────────────  THE STAGE  ───────────────────────── */
+
+.stage {
+  position: fixed; inset: 0; z-index: 1;
+  display: grid; place-items: center;
+  perspective: 1450px;
+  perspective-origin: 50% 46%;
+  transition: perspective-origin .5s cubic-bezier(.22,1,.36,1);
+}
+
+.system { position: relative; width: 0; height: 0; }
+
+/* ── the planet: the Periapses mark, rendered as vector ── */
+.planet {
+  position: absolute; left: 50%; top: 50%;
+  width: var(--planet, 340px); height: var(--planet, 340px);
+  margin: calc(var(--planet, 340px) / -2) 0 0 calc(var(--planet, 340px) / -2);
+  z-index: 1000;
+  animation: drift 15s ease-in-out infinite;
+  filter: drop-shadow(0 0 78px rgba(48,124,214,.40)) drop-shadow(0 0 22px rgba(124,196,255,.20));
+}
+.planet svg { width: 100%; height: 100%; display: block; }
+
+@keyframes drift {
+  0%, 100% { transform: translate3d(0, -10px, 0); }
+  50%      { transform: translate3d(0,  10px, 0); }
+}
+
+/* soft atmosphere bloom behind the disc */
+.halo {
+  position: absolute; left: 50%; top: 50%;
+  width: calc(var(--planet, 340px) * 2.1); height: calc(var(--planet, 340px) * 2.1);
+  margin: calc(var(--planet, 340px) * -1.05) 0 0 calc(var(--planet, 340px) * -1.05);
+  border-radius: 50%; z-index: 998; pointer-events: none;
+  background: radial-gradient(circle, rgba(63,146,236,.20) 0%, rgba(45,110,190,.09) 38%, transparent 66%);
+  animation: breathe 9s ease-in-out infinite;
+}
+@keyframes breathe { 0%,100% { opacity: .75; transform: scale(1); } 50% { opacity: 1; transform: scale(1.06); } }
+
+/* ── the orbital track (tiny dots, placed once, never re-laid-out) ── */
+.tick {
+  position: absolute; left: 50%; top: 50%;
+  width: 3px; height: 3px; margin: -1.5px 0 0 -1.5px;
+  border-radius: 50%; background: var(--blue-lt);
+  pointer-events: none; will-change: transform;
+}
+
+/* ── satellites ── */
+.sat {
+  position: absolute; left: 50%; top: 50%;
+  width: 0; height: 0;
+  will-change: transform;
+}
+
+.pod {
+  position: absolute; left: 50%; top: 50%;
+  width: 128px; height: 128px; margin: -64px 0 0 -64px;
+  display: grid; place-items: center;
+  text-decoration: none; color: var(--text);
+  border-radius: 26px;
+  background:
+    linear-gradient(155deg, rgba(18,44,80,.72), rgba(7,18,38,.78));
+  border: 1px solid rgba(124,196,255,.28);
+  box-shadow:
+    0 0 0 1px rgba(4,10,22,.6),
+    0 18px 44px rgba(2,8,20,.6),
+    inset 0 1px 0 rgba(180,220,255,.14);
+  transition: border-color .45s ease, box-shadow .45s ease, background .45s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* corner brackets — reads like a targeting reticle */
+.pod::before, .pod::after {
+  content: ""; position: absolute; width: 15px; height: 15px;
+  border: 2px solid var(--accent); opacity: 0;
+  transition: opacity .4s ease, inset .4s cubic-bezier(.22,1,.36,1);
+}
+.pod::before { top: 9px;    left: 9px;    border-right: 0; border-bottom: 0; border-radius: 6px 0 0 0; }
+.pod::after  { bottom: 9px; right: 9px;   border-left: 0;  border-top: 0;    border-radius: 0 0 6px 0; }
+
+.pod .glyph { width: 46%; height: 46%; display: block; color: var(--text); transition: color .4s ease, transform .5s cubic-bezier(.22,1,.36,1); }
+.pod .glyph svg { width: 100%; height: 100%; display: block; }
+.pod .glyph [stroke] { stroke: currentColor; }
+.pod .glyph [fill]:not([fill="none"]) { fill: currentColor; }
+
+.pod .tag {
+  position: absolute; bottom: -26px; left: 50%; transform: translateX(-50%);
+  font-size: 10px; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--muted); white-space: nowrap; opacity: 0;
+  transition: opacity .4s ease; font-family: var(--mono);
+}
+
+/* the satellite currently parked front-and-centre */
+.sat.live .pod {
+  border-color: color-mix(in srgb, var(--accent) 70%, transparent);
+  background: linear-gradient(155deg,
+      color-mix(in srgb, var(--accent) 22%, rgba(10,26,52,.8)),
+      rgba(7,18,38,.85));
+  box-shadow:
+    0 0 0 1px rgba(4,10,22,.6),
+    0 0 60px color-mix(in srgb, var(--accent) 40%, transparent),
+    0 22px 60px rgba(2,8,20,.7),
+    inset 0 1px 0 rgba(200,232,255,.2);
+}
+.sat.live .pod::before, .sat.live .pod::after { opacity: .95; }
+.sat.live .pod .glyph { color: #fff; }
+.sat.live .pod .tag { opacity: 1; }
+
+.pod:hover  { border-color: var(--accent); }
+.pod:hover .glyph { transform: scale(1.1); }
+.sat.flag .pod { border-color: var(--accent); box-shadow: 0 0 50px color-mix(in srgb, var(--accent) 45%, transparent), 0 18px 44px rgba(2,8,20,.6); }
+
+/* ─────────────────────────────  HUD  ───────────────────────── */
+
+.hud { position: fixed; inset: 0; z-index: 40; pointer-events: none; }
+
+/* wordmark, top centre */
+.brand {
+  position: absolute; top: clamp(26px, 5vh, 54px); left: 50%; transform: translateX(-50%);
+  text-align: center; transition: opacity .6s ease, transform .6s ease;
+}
+.brand h1 {
+  font-size: clamp(20px, 3.4vw, 34px); font-weight: 700;
+  letter-spacing: .42em; text-indent: .42em;
+  background: linear-gradient(180deg, #fff, #8dc4f5);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.brand p {
+  margin-top: 12px; font-size: clamp(10px, 1.1vw, 12px);
+  letter-spacing: .2em; text-transform: uppercase; color: var(--muted);
+  font-family: var(--mono);
+}
+.scrolled .brand { opacity: .18; transform: translateX(-50%) translateY(-8px); }
+
+/* readout, bottom centre — mirrors whichever link is in focus */
+.readout {
+  position: absolute; left: 50%; bottom: clamp(30px, 7vh, 68px);
+  transform: translateX(-50%); text-align: center; width: min(90vw, 560px);
+}
+.readout .idx {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .3em;
+  color: var(--accent); opacity: .9; margin-bottom: 12px;
+}
+.readout .name {
+  font-size: clamp(24px, 4.6vw, 44px); font-weight: 700; letter-spacing: -.01em; line-height: 1.05;
+}
+.readout .handle {
+  margin-top: 9px; font-family: var(--mono); font-size: clamp(11px, 1.4vw, 13px);
+  letter-spacing: .1em; color: var(--muted);
+}
+.readout .go {
+  pointer-events: auto; display: inline-flex; align-items: center; gap: 10px;
+  margin-top: 22px; padding: 12px 26px; border-radius: 999px;
+  font-size: 11px; letter-spacing: .24em; text-transform: uppercase; font-weight: 600;
+  text-decoration: none; color: var(--text); font-family: var(--mono);
+  border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  background: color-mix(in srgb, var(--accent) 12%, rgba(6,16,32,.66));
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  transition: background .3s ease, border-color .3s ease, transform .3s ease, box-shadow .3s ease;
+}
+.readout .go:hover {
+  background: color-mix(in srgb, var(--accent) 26%, rgba(6,16,32,.7));
+  border-color: var(--accent); transform: translateY(-2px);
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+.readout .go .arr { transition: transform .3s ease; }
+.readout .go:hover .arr { transform: translateX(4px); }
+
+/* swap animation when focus changes */
+.readout .swap { animation: swapIn .55s cubic-bezier(.22,1,.36,1) both; }
+@keyframes swapIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* scroll nudge */
+.nudge {
+  position: absolute; right: clamp(20px, 3vw, 44px); top: 50%; transform: translateY(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  font-family: var(--mono); font-size: 9px; letter-spacing: .3em; text-transform: uppercase;
+  color: var(--muted); transition: opacity .5s ease;
+}
+.nudge span { writing-mode: vertical-rl; }
+.nudge i {
+  display: block; width: 1px; height: 54px;
+  background: linear-gradient(var(--blue-lt), transparent);
+  animation: fall 2.1s ease-in-out infinite;
+}
+@keyframes fall { 0% { opacity: 0; transform: scaleY(.2); transform-origin: top; } 45% { opacity: 1; } 100% { opacity: 0; transform: scaleY(1); transform-origin: top; } }
+.scrolled .nudge { opacity: 0; }
+
+/* ─────────────────────────  NAV (hover)  ───────────────────────── */
+
+.nav { position: fixed; top: clamp(20px, 3vh, 34px); left: clamp(20px, 3vw, 38px); z-index: 60; }
+
+.knob {
+  width: 52px; height: 52px; border-radius: 50%; cursor: pointer;
+  display: grid; place-items: center; position: relative;
+  border: 1px solid rgba(124,196,255,.3);
+  background: linear-gradient(150deg, rgba(16,40,74,.8), rgba(6,16,34,.85));
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 26px rgba(2,8,20,.6), inset 0 1px 0 rgba(180,220,255,.14);
+  transition: border-color .35s ease, box-shadow .35s ease;
+}
+.knob::after {
+  content: ""; position: absolute; inset: -6px; border-radius: 50%;
+  border: 1px solid rgba(124,196,255,.18); border-top-color: var(--blue-lt);
+  animation: spin 6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.knob i { display: block; width: 17px; height: 1.5px; background: var(--text); border-radius: 2px; position: relative; transition: transform .4s cubic-bezier(.22,1,.36,1), opacity .3s ease; }
+.knob i::before, .knob i::after { content: ""; position: absolute; left: 0; width: 17px; height: 1.5px; background: var(--text); border-radius: 2px; transition: transform .4s cubic-bezier(.22,1,.36,1); }
+.knob i::before { top: -6px; } .knob i::after { top: 6px; }
+
+.nav:hover .knob, .nav:focus-within .knob { border-color: var(--blue-lt); box-shadow: 0 0 34px rgba(76,163,255,.4); }
+.nav:hover .knob i, .nav:focus-within .knob i { transform: rotate(45deg); }
+.nav:hover .knob i::before, .nav:focus-within .knob i::before { transform: translateY(6px) rotate(-90deg); }
+.nav:hover .knob i::after,  .nav:focus-within .knob i::after  { transform: translateY(-6px) rotate(-90deg); }
+
+/* invisible bridge so the pointer can travel from knob to panel */
+.panel-wrap { position: absolute; top: 44px; left: -10px; padding-top: 22px; opacity: 0; pointer-events: none; transition: opacity .3s ease; }
+.nav:hover .panel-wrap, .nav:focus-within .panel-wrap { opacity: 1; pointer-events: auto; }
+
+.panel {
+  width: 320px; max-height: min(78vh, 720px); overflow-y: auto; overscroll-behavior: contain;
+  border-radius: 22px; padding: 14px 12px 16px;
+  border: 1px solid rgba(124,196,255,.24);
+  background: linear-gradient(165deg, rgba(11,28,54,.93), rgba(5,13,28,.95));
+  backdrop-filter: blur(22px) saturate(1.25); -webkit-backdrop-filter: blur(22px) saturate(1.25);
+  box-shadow: 0 30px 70px rgba(1,5,14,.72), inset 0 1px 0 rgba(180,220,255,.12);
+  transform: translateY(-10px) scale(.97); transform-origin: top left;
+  transition: transform .42s cubic-bezier(.22,1,.36,1);
+  scrollbar-width: thin; scrollbar-color: rgba(124,196,255,.3) transparent;
+}
+.nav:hover .panel, .nav:focus-within .panel { transform: none; }
+.panel::-webkit-scrollbar { width: 5px; }
+.panel::-webkit-scrollbar-thumb { background: rgba(124,196,255,.3); border-radius: 9px; }
+
+.panel .cap {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .28em; text-transform: uppercase;
+  color: var(--muted); padding: 6px 14px 16px;
+  display: flex; justify-content: space-between;
+  border-bottom: 1px solid rgba(124,196,255,.13); margin-bottom: 8px;
+}
+
+/* rows: roomy, with a hairline between each so they read as a list */
+.rows { display: flex; flex-direction: column; gap: 2px; }
+
+.row {
+  display: flex; align-items: center; gap: 15px;
+  padding: 13px 14px; border-radius: 14px;
+  text-decoration: none; color: var(--text);
+  transition: background .22s ease, transform .22s ease;
+  position: relative;
+}
+.row + .row::after {
+  content: ""; position: absolute; top: -1px; left: 14px; right: 14px; height: 1px;
+  background: rgba(124,196,255,.09);
+}
+.row:hover { background: color-mix(in srgb, var(--accent) 16%, transparent); transform: translateX(4px); }
+.row:hover::after, .row:hover + .row::after { opacity: 0; }
+.row .ic { width: 21px; height: 21px; flex: none; color: var(--muted); transition: color .22s ease; }
+.row .ic svg { width: 100%; height: 100%; display: block; }
+.row .ic [stroke] { stroke: currentColor; } .row .ic [fill]:not([fill="none"]) { fill: currentColor; }
+.row:hover .ic { color: var(--accent); }
+.row .txt { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.row .t1 { font-size: 14px; font-weight: 600; letter-spacing: .01em; line-height: 1.15; }
+.row .t2 { font-size: 10.5px; font-family: var(--mono); color: var(--muted); letter-spacing: .05em; line-height: 1.15; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* ─────────────────────────  RESPONSIVE  ───────────────────────── */
+
+@media (max-width: 860px) {
+  .pod { width: 100px; height: 100px; margin: -50px 0 0 -50px; border-radius: 21px; }
+  .pod::before, .pod::after { width: 12px; height: 12px; }
+  .nudge { display: none; }
+  .panel-wrap { left: -8px; }
+  .panel { width: min(78vw, 292px); }
+  .readout { bottom: clamp(22px, 5vh, 44px); }
+}
+
+@media (max-width: 520px) {
+  .pod { width: 84px; height: 84px; margin: -42px 0 0 -42px; border-radius: 18px; }
+  .pod .tag { display: none; }
+  .brand p { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .planet, .halo, .knob::after, .nudge i, .trails path { animation: none !important; }
+  .readout .swap { animation: none !important; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ══════════════  BACKGROUND  ══════════════ -->
+<div class="sky">
+  <canvas id="stars"></canvas>
+  <svg class="trails" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="tg" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0"   stop-color="#2f7fd4" stop-opacity="0"/>
+        <stop offset=".45" stop-color="#8ed0ff" stop-opacity=".85"/>
+        <stop offset="1"   stop-color="#2f7fd4" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="tg2" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0"   stop-color="#1e5fae" stop-opacity="0"/>
+        <stop offset=".5"  stop-color="#5aa8ee" stop-opacity=".5"/>
+        <stop offset="1"   stop-color="#1e5fae" stop-opacity="0"/>
+      </linearGradient>
+      <filter id="soft" x="-20%" y="-60%" width="140%" height="220%">
+        <feGaussianBlur stdDeviation="5"/>
+      </filter>
+    </defs>
+    <g filter="url(#soft)">
+      <path d="M-120 620 C 320 596, 700 500, 1080 392 S 1500 214, 1740 176" stroke="url(#tg)"  stroke-width="3"   opacity=".9"/>
+      <path d="M-120 676 C 340 656, 740 556, 1120 440 S 1520 262, 1740 226" stroke="url(#tg2)" stroke-width="1.6" opacity=".7"/>
+      <path d="M-120 566 C 300 540, 660 448, 1040 348 S 1470 176, 1740 132" stroke="url(#tg2)" stroke-width="1.2" opacity=".55"/>
+      <path d="M-120 730 C 360 714, 780 614, 1160 494 S 1540 316, 1740 282" stroke="url(#tg2)" stroke-width="1"   opacity=".4"/>
+    </g>
+    <path d="M-120 620 C 320 596, 700 500, 1080 392 S 1500 214, 1740 176" stroke="url(#tg)" stroke-width="1" opacity=".95"/>
+  </svg>
+  <div class="vignette"></div>
+</div>
+
+<!-- ══════════════  STAGE  ══════════════ -->
+<div class="stage" id="stage">
+  <div class="system" id="system">
+    <div class="halo"></div>
+
+    <!-- The Periapses mark, rebuilt as vector so it stays razor-sharp.
+         The orbital ring is split: the back half draws behind the glyph,
+         the front half draws over it. -->
+    <div class="planet" id="planet">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Periapses">
+        <defs>
+          <radialGradient id="disc2" cx="34%" cy="30%" r="82%">
+            <stop offset="0"   stop-color="#3a86d0"/>
+            <stop offset=".42" stop-color="#1a5896"/>
+            <stop offset=".80" stop-color="#0e3866"/>
+            <stop offset="1"   stop-color="#082a4a"/>
+          </radialGradient>
+          <linearGradient id="rim" x1=".2" y1="0" x2=".8" y2="1">
+            <stop offset="0"   stop-color="#9fd4ff" stop-opacity=".9"/>
+            <stop offset=".5"  stop-color="#4b93d8" stop-opacity=".25"/>
+            <stop offset="1"   stop-color="#0a2a4c" stop-opacity=".7"/>
+          </linearGradient>
+          <radialGradient id="shade" cx="32%" cy="26%" r="92%">
+            <stop offset=".45" stop-color="#000814" stop-opacity="0"/>
+            <stop offset="1"   stop-color="#000814" stop-opacity=".40"/>
+          </radialGradient>
+          <radialGradient id="spec" cx="30%" cy="24%" r="46%">
+            <stop offset="0"   stop-color="#bfe2ff" stop-opacity=".20"/>
+            <stop offset="1"   stop-color="#bfe2ff" stop-opacity="0"/>
+          </radialGradient>
+          <!-- the mark, defined once so the knockout mask can reuse it -->
+          <path id="mk" d="M 125.5,104.2 L 126.3,103.5 L 127.2,102.6 L 128.1,101.6 L 128.9,100.7 L 129.7,99.7 L 130.4,98.7 L 131.1,97.7 L 131.8,96.6 L 132.5,95.5 L 133.1,94.4 L 133.7,93.3 L 134.2,92.2 L 134.7,91.0 L 135.2,89.9 L 135.6,88.7 L 136.0,87.5 L 136.4,86.3 L 136.7,85.1 L 137.0,83.8 L 137.2,82.6 L 137.4,81.4 L 137.5,80.1 L 137.6,78.9 L 137.7,77.6 L 137.7,76.3 L 137.7,75.1 L 137.7,73.8 L 137.6,72.6 L 137.5,71.3 L 137.3,70.1 L 137.1,68.8 L 136.8,67.6 L 136.5,66.4 L 136.2,65.2 L 135.8,64.0 L 135.4,62.8 L 135.0,61.6 L 134.5,60.4 L 134.0,59.3 L 133.4,58.2 L 132.8,57.1 L 132.2,56.0 L 131.5,54.9 L 130.8,53.9 L 130.1,52.8 L 129.3,51.8 L 128.5,50.9 L 127.7,49.9 L 126.8,49.0 L 125.9,48.1 L 125.0,47.3 L 124.1,46.4 L 123.1,45.6 L 122.1,44.9 L 121.1,44.1 L 120.0,43.4 L 118.9,42.8 L 117.9,42.1 L 116.7,41.6 L 115.6,41.0 L 114.5,40.5 L 113.3,40.0 L 112.1,39.5 L 110.9,39.1 L 109.7,38.8 L 108.5,38.4 L 107.3,38.2 L 106.1,37.9 L 104.8,37.7 L 103.6,37.5 L 102.3,37.4 L 101.1,37.3 L 99.8,37.3 L 98.6,37.3 L 97.3,37.3 L 96.1,37.4 L 94.8,37.5 L 93.6,37.6 L 92.3,37.8 L 91.1,38.1 L 89.8,38.3 L 88.6,38.7 L 87.4,39.0 L 86.2,39.4 L 85.1,39.8 L 83.9,40.3 L 82.7,40.8 L 81.6,41.4 L 80.5,42.0 L 79.4,42.6 L 78.3,43.2 L 77.3,43.9 L 76.2,44.6 L 75.2,45.4 L 74.2,46.2 L 73.3,47.0 L 72.4,47.9 L 71.5,48.7 L 70.6,49.6 L 69.8,50.6 L 68.9,51.5 L 68.2,52.5 L 67.4,53.5 L 66.7,54.6 L 66.0,55.6 L 65.4,56.7 L 64.8,57.8 L 64.2,58.9 L 63.7,60.1 L 63.2,61.2 L 62.7,62.4 L 62.3,63.6 L 61.9,64.8 L 61.6,66.0 L 61.3,67.2 L 61.0,68.4 L 60.8,69.7 L 60.6,70.9 L 60.4,72.2 L 60.3,73.4 L 60.3,74.7 L 60.3,75.9 L 60.3,77.2 L 60.3,78.5 L 60.4,79.7 L 60.6,81.0 L 60.8,82.2 L 61.0,83.4 L 61.2,84.7 L 61.5,85.9 L 61.9,87.1 L 62.3,88.3 L 62.7,89.5 L 63.1,90.7 L 63.6,91.8 L 64.2,93.0 L 64.7,94.1 L 65.3,95.2 L 66.0,96.3 L 66.6,97.3 L 67.4,98.4 L 68.1,99.4 L 68.9,100.4 L 69.7,101.3 L 70.5,102.3 L 71.4,103.2 L 72.3,104.1 L 73.2,104.9 L 74.2,105.7 L 75.0,106.4 L 75.2,106.6 L 75.2,106.6 L 75.3,106.6 L 75.3,106.7 L 75.4,106.7 L 75.4,106.8 L 75.5,106.9 L 75.6,107.1 L 75.7,107.3 L 75.8,107.5 L 75.9,107.7 L 76.0,108.0 L 76.1,108.4 L 76.3,108.8 L 76.4,109.2 L 76.5,109.7 L 76.5,110.2 L 76.6,110.8 L 76.7,111.4 L 76.8,112.0 L 76.8,112.7 L 76.8,113.4 L 76.9,114.2 L 76.9,115.0 L 76.9,115.8 L 76.9,116.7 L 76.8,117.5 L 76.8,118.5 L 76.8,119.4 L 76.7,120.4 L 76.6,121.4 L 76.6,122.5 L 76.5,123.5 L 76.4,124.6 L 76.3,125.8 L 76.2,126.9 L 76.0,128.1 L 75.9,129.3 L 75.8,130.5 L 75.7,131.8 L 75.5,133.1 L 75.4,134.4 L 75.2,135.7 L 75.1,137.1 L 74.9,138.4 L 74.8,139.8 L 74.6,141.3 L 74.5,142.7 L 74.3,144.2 L 74.2,145.7 L 74.1,147.2 L 73.9,148.7 L 73.8,150.3 L 73.7,151.9 L 73.7,153.5 L 73.6,155.1 L 73.6,156.8 L 73.6,158.5 L 73.7,160.2 L 74.0,162.0 L 74.0,162.0 L 75.2,160.6 L 76.2,159.2 L 77.1,157.8 L 77.9,156.3 L 78.7,154.9 L 79.5,153.5 L 80.3,152.1 L 81.0,150.7 L 81.7,149.3 L 82.3,147.9 L 83.0,146.5 L 83.6,145.2 L 84.2,143.8 L 84.8,142.5 L 85.4,141.2 L 85.9,139.9 L 86.5,138.6 L 87.0,137.3 L 87.5,136.0 L 87.9,134.7 L 88.4,133.5 L 88.8,132.2 L 89.3,131.0 L 89.7,129.8 L 90.0,128.6 L 90.4,127.4 L 90.8,126.2 L 91.1,125.1 L 91.4,123.9 L 91.7,122.8 L 91.9,121.6 L 92.2,120.5 L 92.4,119.4 L 92.6,118.3 L 92.8,117.2 L 92.9,116.2 L 93.1,115.1 L 93.2,114.0 L 93.3,113.0 L 93.3,111.9 L 93.4,110.9 L 93.4,109.9 L 93.3,108.8 L 93.3,107.8 L 93.2,106.8 L 93.0,105.8 L 92.9,104.8 L 92.7,103.7 L 92.4,102.7 L 92.1,101.7 L 91.7,100.7 L 91.3,99.7 L 90.9,98.8 L 90.3,97.8 L 89.7,96.9 L 89.1,96.0 L 88.4,95.1 L 87.6,94.3 L 86.8,93.5 L 86.1,92.9 L 85.4,92.3 L 84.9,91.9 L 84.4,91.4 L 83.9,90.9 L 83.4,90.4 L 82.9,89.9 L 82.5,89.4 L 82.1,88.8 L 81.6,88.3 L 81.3,87.7 L 80.9,87.1 L 80.5,86.5 L 80.2,85.9 L 79.9,85.3 L 79.6,84.7 L 79.3,84.0 L 79.1,83.4 L 78.9,82.7 L 78.6,82.1 L 78.5,81.4 L 78.3,80.8 L 78.1,80.1 L 78.0,79.4 L 77.9,78.7 L 77.8,78.0 L 77.8,77.3 L 77.8,76.7 L 77.8,76.0 L 77.8,75.3 L 77.8,74.6 L 77.9,73.9 L 77.9,73.2 L 78.0,72.5 L 78.2,71.9 L 78.3,71.2 L 78.5,70.5 L 78.7,69.9 L 78.9,69.2 L 79.1,68.5 L 79.4,67.9 L 79.6,67.3 L 79.9,66.6 L 80.2,66.0 L 80.6,65.4 L 80.9,64.8 L 81.3,64.3 L 81.7,63.7 L 82.1,63.1 L 82.5,62.6 L 83.0,62.1 L 83.4,61.5 L 83.9,61.0 L 84.4,60.6 L 84.9,60.1 L 85.4,59.7 L 86.0,59.2 L 86.5,58.8 L 87.1,58.4 L 87.7,58.0 L 88.2,57.7 L 88.8,57.3 L 89.5,57.0 L 90.1,56.7 L 90.7,56.4 L 91.4,56.2 L 92.0,55.9 L 92.7,55.7 L 93.3,55.5 L 94.0,55.4 L 94.7,55.2 L 95.3,55.1 L 96.0,55.0 L 96.7,54.9 L 97.4,54.8 L 98.1,54.8 L 98.8,54.8 L 99.5,54.8 L 100.1,54.8 L 100.8,54.8 L 101.5,54.9 L 102.2,55.0 L 102.9,55.1 L 103.6,55.2 L 104.2,55.4 L 104.9,55.6 L 105.6,55.8 L 106.2,56.0 L 106.9,56.3 L 107.5,56.5 L 108.1,56.8 L 108.7,57.1 L 109.3,57.4 L 109.9,57.8 L 110.5,58.1 L 111.1,58.5 L 111.7,58.9 L 112.2,59.4 L 112.7,59.8 L 113.3,60.2 L 113.8,60.7 L 114.2,61.2 L 114.7,61.7 L 115.2,62.2 L 115.6,62.8 L 116.0,63.3 L 116.4,63.9 L 116.8,64.4 L 117.2,65.0 L 117.5,65.6 L 117.9,66.2 L 118.2,66.8 L 118.5,67.5 L 118.7,68.1 L 119.0,68.7 L 119.2,69.4 L 119.4,70.1 L 119.6,70.7 L 119.7,71.4 L 119.9,72.1 L 120.0,72.7 L 120.1,73.4 L 120.2,74.1 L 120.2,74.8 L 120.2,75.5 L 120.2,76.2 L 120.2,76.9 L 120.2,77.6 L 120.1,78.3 L 120.0,78.9 L 119.9,79.6 L 119.8,80.3 L 119.7,81.0 L 119.5,81.6 L 119.3,82.3 L 119.1,83.0 L 118.8,83.6 L 118.6,84.2 L 118.3,84.9 L 118.0,85.5 L 117.7,86.1 L 117.4,86.7 L 117.0,87.3 L 116.6,87.9 L 116.2,88.4 L 115.8,89.0 L 115.4,89.5 L 114.9,90.1 L 114.5,90.6 L 114.0,91.1 L 113.4,91.6 Z"/>
+          <!-- punches a clean gap out of whatever passes BEHIND the mark,
+               so the ring reads as going behind instead of merging into it -->
+          <mask id="knock" maskUnits="userSpaceOnUse" x="0" y="0" width="200" height="200">
+            <rect width="200" height="200" fill="#fff"/>
+            <use href="#mk" fill="#000" stroke="#000" stroke-width="10" stroke-linejoin="round"/>
+            <circle cx="119.5" cy="97.9" r="13.8" fill="#000"/>
+          </mask>
+          <clipPath id="clip"><circle cx="100" cy="100" r="98"/></clipPath>
+        </defs>
+
+        <!-- body -->
+        <circle cx="100" cy="100" r="98" fill="#123f74"/>
+        <circle cx="100" cy="100" r="98" fill="url(#disc2)"/>
+        <circle cx="100" cy="100" r="97" fill="none" stroke="url(#rim)" stroke-width="2"/>
+
+        <g clip-path="url(#clip)">
+          <!-- Every white shape below is one outline with a single continuous
+               width profile, so the line weight never jumps. The orbital ring
+               is one tapered ribbon split in two: the back segment draws under
+               the glyph, the front segment over it, and they meet at identical
+               width so the seam is invisible. -->
+
+          <!-- ORBITAL RING — back segment (behind the glyph) -->
+          <path fill="#ffffff" mask="url(#knock)" d="M 42.6,137.8 L 42.0,137.2 L 41.7,136.8 L 41.3,136.3 L 41.0,135.8 L 40.8,135.3 L 40.6,134.7 L 40.4,134.0 L 40.3,133.3 L 40.2,132.6 L 40.1,131.7 L 40.2,130.8 L 40.3,129.8 L 40.4,128.8 L 40.6,127.7 L 40.9,126.5 L 41.3,125.3 L 41.8,124.1 L 42.3,122.8 L 42.9,121.5 L 43.5,120.1 L 44.3,118.7 L 45.1,117.2 L 46.0,115.8 L 47.0,114.3 L 48.0,112.7 L 49.1,111.2 L 50.3,109.6 L 51.5,108.1 L 52.8,106.5 L 54.2,104.9 L 55.6,103.3 L 57.1,101.7 L 58.6,100.1 L 60.2,98.4 L 61.9,96.8 L 63.6,95.2 L 65.3,93.6 L 67.1,92.0 L 68.9,90.4 L 70.8,88.8 L 72.7,87.3 L 74.7,85.7 L 76.7,84.2 L 78.7,82.7 L 80.8,81.2 L 82.8,79.7 L 84.9,78.3 L 87.1,76.9 L 89.2,75.5 L 91.3,74.1 L 93.5,72.8 L 95.7,71.5 L 97.9,70.3 L 100.1,69.0 L 102.3,67.9 L 104.4,66.7 L 106.6,65.6 L 108.8,64.5 L 111.0,63.5 L 113.2,62.5 L 115.3,61.6 L 117.4,60.7 L 119.5,59.9 L 121.6,59.1 L 123.7,58.4 L 125.7,57.7 L 127.8,57.0 L 129.7,56.4 L 131.7,55.9 L 133.6,55.4 L 135.5,54.9 L 137.3,54.5 L 139.1,54.2 L 140.9,53.9 L 140.9,53.9 L 139.1,53.9 L 137.2,54.0 L 135.4,54.2 L 133.4,54.4 L 131.4,54.7 L 129.4,55.0 L 127.3,55.4 L 125.2,55.9 L 123.1,56.4 L 120.9,56.9 L 118.8,57.6 L 116.5,58.2 L 114.3,59.0 L 112.0,59.7 L 109.8,60.6 L 107.5,61.4 L 105.2,62.4 L 102.9,63.3 L 100.5,64.3 L 98.2,65.4 L 95.9,66.5 L 93.6,67.6 L 91.3,68.8 L 89.0,70.0 L 86.7,71.3 L 84.4,72.6 L 82.1,73.9 L 79.9,75.3 L 77.7,76.6 L 75.5,78.0 L 73.3,79.5 L 71.2,80.9 L 69.1,82.4 L 67.0,83.9 L 65.0,85.5 L 63.0,87.0 L 61.0,88.6 L 59.1,90.2 L 57.2,91.7 L 55.4,93.3 L 53.6,94.9 L 51.9,96.6 L 50.3,98.2 L 48.7,99.8 L 47.1,101.4 L 45.6,103.1 L 44.2,104.7 L 42.8,106.3 L 41.5,107.9 L 40.3,109.5 L 39.1,111.2 L 38.0,112.8 L 37.0,114.4 L 36.0,115.9 L 35.1,117.5 L 34.3,119.1 L 33.6,120.7 L 32.9,122.2 L 32.3,123.7 L 31.8,125.3 L 31.4,126.8 L 31.1,128.3 L 30.8,129.8 L 30.7,131.3 L 30.6,132.8 L 30.7,134.3 L 30.8,135.7 L 31.1,137.2 L 31.5,138.6 L 32.0,139.9 L 32.6,141.2 L 33.4,142.5 L 34.2,143.7 L 35.0,144.6 Z"/>
+
+          <!-- THE MARK — loop and tail as one ribbon, tapering to a point -->
+          <use href="#mk" fill="#ffffff"/>
+          <!-- rounded cap on the mark's free terminal -->
+          <circle cx="119.5" cy="97.9" r="8.8" fill="#ffffff"/>
+
+          <!-- ORBITAL RING — front segment (sweeps over the glyph) -->
+          <path fill="#ffffff" d="M 162.8,60.8 L 162.5,62.1 L 162.5,63.2 L 162.5,64.2 L 162.5,65.1 L 162.4,66.1 L 162.3,67.1 L 162.1,68.2 L 161.8,69.2 L 161.5,70.3 L 161.2,71.5 L 160.8,72.6 L 160.3,73.8 L 159.7,75.1 L 159.0,76.4 L 158.3,77.7 L 157.5,79.0 L 156.7,80.4 L 155.8,81.8 L 154.8,83.3 L 153.7,84.7 L 152.5,86.2 L 151.3,87.7 L 150.1,89.3 L 148.7,90.8 L 147.3,92.3 L 145.8,93.9 L 144.3,95.5 L 142.7,97.1 L 141.0,98.6 L 139.3,100.2 L 137.5,101.8 L 135.7,103.4 L 133.8,104.9 L 131.9,106.5 L 130.0,108.1 L 128.0,109.6 L 125.9,111.1 L 123.8,112.6 L 121.7,114.1 L 119.6,115.6 L 117.4,117.0 L 115.2,118.4 L 113.0,119.8 L 110.8,121.2 L 108.5,122.5 L 106.2,123.8 L 104.0,125.0 L 101.7,126.3 L 99.4,127.4 L 97.1,128.6 L 94.8,129.7 L 92.6,130.7 L 90.3,131.7 L 88.1,132.7 L 85.8,133.6 L 83.6,134.4 L 81.4,135.3 L 79.3,136.0 L 77.1,136.7 L 75.0,137.4 L 73.0,138.0 L 70.9,138.5 L 68.9,139.0 L 67.0,139.4 L 65.1,139.8 L 63.3,140.1 L 61.5,140.4 L 59.8,140.6 L 58.1,140.7 L 56.5,140.8 L 55.0,140.9 L 53.5,140.9 L 52.2,140.8 L 50.9,140.7 L 49.6,140.5 L 48.5,140.3 L 47.5,140.1 L 46.5,139.8 L 45.6,139.5 L 44.8,139.2 L 44.1,138.8 L 43.5,138.4 L 42.9,138.0 L 42.3,137.5 L 35.4,144.9 L 36.3,145.8 L 37.5,146.8 L 38.8,147.7 L 40.1,148.5 L 41.6,149.2 L 43.0,149.8 L 44.6,150.3 L 46.2,150.7 L 47.9,151.0 L 49.6,151.3 L 51.3,151.5 L 53.1,151.6 L 55.0,151.7 L 56.9,151.7 L 58.8,151.6 L 60.8,151.4 L 62.9,151.2 L 65.0,150.9 L 67.1,150.6 L 69.2,150.2 L 71.4,149.7 L 73.6,149.2 L 75.9,148.6 L 78.2,147.9 L 80.5,147.2 L 82.8,146.4 L 85.2,145.6 L 87.5,144.7 L 89.9,143.8 L 92.3,142.8 L 94.7,141.7 L 97.1,140.6 L 99.5,139.5 L 102.0,138.3 L 104.4,137.1 L 106.8,135.8 L 109.2,134.5 L 111.6,133.1 L 114.0,131.7 L 116.3,130.3 L 118.6,128.8 L 121.0,127.3 L 123.3,125.7 L 125.5,124.2 L 127.7,122.6 L 129.9,120.9 L 132.1,119.3 L 134.2,117.6 L 136.3,115.9 L 138.3,114.2 L 140.3,112.5 L 142.2,110.7 L 144.1,109.0 L 145.9,107.2 L 147.7,105.4 L 149.4,103.6 L 151.0,101.8 L 152.6,100.1 L 154.1,98.3 L 155.5,96.5 L 156.9,94.7 L 158.2,92.9 L 159.4,91.1 L 160.5,89.4 L 161.6,87.6 L 162.5,85.9 L 163.4,84.2 L 164.2,82.5 L 164.9,80.8 L 165.5,79.1 L 166.1,77.5 L 166.5,75.9 L 166.8,74.3 L 167.1,72.7 L 167.2,71.2 L 167.2,69.7 L 167.1,68.3 L 166.9,66.9 L 166.6,65.6 L 166.2,64.4 L 165.6,63.2 L 164.9,62.2 L 164.1,61.3 L 162.8,60.8 Z"/>
+
+          <!-- sparkle at the ring's apex -->
+          <path fill="#ffffff" d="M 160.0,28.0 Q 162.7,44.6 176.0,48.0 Q 162.7,51.4 160.0,68.0 Q 157.3,51.4 144.0,48.0 Q 157.3,44.6 160.0,28.0 Z"/>
+
+          <!-- soft sphere shading: gradients only, so nothing crosses the
+               white shapes with a hard edge -->
+          <circle cx="100" cy="100" r="98" fill="url(#shade)"/>
+          <circle cx="100" cy="100" r="98" fill="url(#spec)"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════  HUD  ══════════════ -->
+<div class="hud" id="hud">
+  <div class="brand">
+    <h1>PERIAPSES</h1>
+    <p id="tagline">Where all these links orbit around the platform closest to you</p>
+  </div>
+
+  <div class="readout">
+    <div class="idx"    id="rIdx">01 / 12</div>
+    <div class="name"   id="rName">—</div>
+    <div class="handle" id="rHandle">—</div>
+    <a class="go" id="rGo" href="#" target="_blank" rel="noopener noreferrer">
+      <span>Visit</span><span class="arr">→</span>
+    </a>
+  </div>
+
+  <div class="nudge">
+    <span>Scroll to orbit</span>
+    <i></i>
+  </div>
+</div>
+
+<!-- ══════════════  NAV  ══════════════ -->
+<nav class="nav" id="nav" aria-label="All links">
+  <div class="knob" tabindex="0" aria-haspopup="true"><i></i></div>
+  <div class="panel-wrap">
+    <div class="panel">
+      <div class="cap"><span>All destinations</span><span id="navCount"></span></div>
+      <div class="rows" id="navRows"></div>
+    </div>
+  </div>
+</nav>
+
+<div id="scrollTrack"></div>
+
+<script>
+/* ══════════════════════════════════════════════════════════════════════
+   ███  EDIT YOUR LINKS HERE  ███
+
+   Add, remove or reorder freely — everything else (the orbit spacing,
+   the page height, the menu, the counter) recalculates on its own.
+
+   Each entry:
+     name   → big label shown at the bottom when it's in focus
+     handle → the small line under it (your @, or anything you like)
+     url    → where it goes
+     icon   → one of the keys in the ICONS list further down
+     color  → the glow colour used when that link is in focus
+
+   The centre planet uses planet.webp, cut from your IconLogo.png. To go
+   back to the drawn vector version instead, set PLANET_IMAGE to null.
+   ══════════════════════════════════════════════════════════════════════ */
+
+const LINKS = [
+  { name: 'YouTube',    handle: '@ParogeeTheOG',      url: 'https://www.youtube.com/@ParogeeTheOG',            icon: 'youtube',   color: '#ff3b30' },
+  { name: 'Twitch',     handle: 'twitch.tv/parogee',  url: 'https://www.twitch.tv/parogee',                    icon: 'twitch',    color: '#a970ff' },
+  { name: 'Discord',    handle: 'Parogee Server',     url: 'https://discord.gg/WdKvBn6qgJ',                    icon: 'discord',   color: '#5865f2' },
+  { name: 'Add Me',     handle: 'Parogee on Discord', url: 'https://discord.gg/wQRTnbKz',                      icon: 'discord',   color: '#7d87ff' },
+  { name: 'X',          handle: '@ParogeeX',          url: 'https://x.com/ParogeeX',                           icon: 'x',         color: '#8fd3ff' },
+  { name: 'Instagram',  handle: '@parogeeig',         url: 'https://www.instagram.com/parogeeig/',             icon: 'instagram', color: '#ff4f8b' },
+  { name: 'TikTok',     handle: '@parogee.com',       url: 'https://www.tiktok.com/@parogee.com',              icon: 'tiktok',    color: '#25f4ee' },
+  { name: 'Reddit',     handle: 'u/Parogee1',         url: 'https://www.reddit.com/user/Parogee1/',            icon: 'reddit',    color: '#ff5c1c' },
+  { name: 'GitHub',     handle: 'github.com/Parogee', url: 'https://github.com/Parogee',                       icon: 'github',    color: '#c9d6e6' },
+  { name: 'Bluesky',    handle: 'parogee.bsky.social',url: 'https://bsky.app/profile/parogee.bsky.social',     icon: 'bluesky',   color: '#3ba0ff' },
+  { name: 'Mastodon',   handle: '@Parogee',           url: 'https://mastodon.social/@Parogee',                 icon: 'mastodon',  color: '#7a6bff' },
+  { name: 'MakerWorld', handle: '3D Prints',          url: 'https://makerworld.com/en/@Parogee',               icon: 'cube',      color: '#4ade9b' },
+];
+
+const CONFIG = {
+  PLANET_IMAGE: 'planet.webp',   // your logo. set to null to use the drawn vector instead
+  LOOP:         true,   // scroll past the end and it wraps around forever
+  DWELL:        0.30,   // 0–0.45. Higher = links park and float longer between moves
+  TILT:         11,     // degrees the orbit is tilted toward you
+  GLIDE:        0.11,   // 0.05 slow & heavy, 0.25 snappy
+};
+
+/* ══════════════════════════════════════════════════════════════════════
+   Icons. Add your own by dropping another entry in here and referencing
+   its key above. Anything drawn in a 24×24 box works.
+   ══════════════════════════════════════════════════════════════════════ */
+
+const S = 'fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"';
+const ICONS = {
+  youtube:  `<svg viewBox="0 0 24 24"><rect x="1.6" y="5" width="20.8" height="14" rx="4.6" ${S} stroke="currentColor"/><path d="M10.2 8.9 L15.6 12 L10.2 15.1 Z" fill="currentColor"/></svg>`,
+  twitch:   `<svg viewBox="0 0 24 24"><path d="M4 3.6 H20 V13.4 L16.2 17.2 H12.4 L9.2 20.4 V17.2 H4 Z" ${S} stroke="currentColor"/><path d="M11.2 8 V12.6 M15.6 8 V12.6" ${S} stroke="currentColor"/></svg>`,
+  discord:  `<svg viewBox="0 0 24 24"><path d="M9.1 5.4 C6.2 6.4 4.3 9 4.3 12.8 C4.3 15.6 6 17.9 8.7 18.7 L9.8 16.7" ${S} stroke="currentColor"/><path d="M14.9 5.4 C17.8 6.4 19.7 9 19.7 12.8 C19.7 15.6 18 17.9 15.3 18.7 L14.2 16.7" ${S} stroke="currentColor"/><path d="M9.1 5.4 Q12 4.5 14.9 5.4" ${S} stroke="currentColor"/><path d="M8.5 16.4 Q12 17.8 15.5 16.4" ${S} stroke="currentColor"/><ellipse cx="9.6" cy="12.1" rx="1.35" ry="1.7" fill="currentColor"/><ellipse cx="14.4" cy="12.1" rx="1.35" ry="1.7" fill="currentColor"/></svg>`,
+  x:        `<svg viewBox="0 0 24 24"><path d="M4.4 4.2 L19.6 19.8 M19.6 4.2 L4.4 19.8" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" fill="none"/></svg>`,
+  instagram:`<svg viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5.4" ${S} stroke="currentColor"/><circle cx="12" cy="12" r="4.2" ${S} stroke="currentColor"/><circle cx="17.1" cy="6.9" r="1.25" fill="currentColor"/></svg>`,
+  tiktok:   `<svg viewBox="0 0 24 24"><path d="M14.1 3.4 V14.6 A3.7 3.7 0 1 1 10.4 10.9" ${S} stroke="currentColor"/><path d="M14.1 3.4 C14.7 6.5 16.8 8.5 19.8 8.8" ${S} stroke="currentColor"/></svg>`,
+  reddit:   `<svg viewBox="0 0 24 24"><ellipse cx="12" cy="13.4" rx="7.6" ry="6" ${S} stroke="currentColor"/><path d="M12 7.4 L13.4 3.9 L16.6 4.7" ${S} stroke="currentColor"/><circle cx="17.1" cy="4.4" r="1.5" fill="currentColor"/><circle cx="9.5" cy="12.6" r="1.15" fill="currentColor"/><circle cx="14.5" cy="12.6" r="1.15" fill="currentColor"/><path d="M9.4 16.2 Q12 17.7 14.6 16.2" ${S} stroke="currentColor"/></svg>`,
+  github:   `<svg viewBox="0 0 24 24"><path d="M9 21.6 V18.4 C9 17.4 9.3 16.9 9.7 16.6 C6.5 16.25 4 15.05 4 10.75 C4 9.35 4.5 8.2 5.35 7.3 C5.05 6.5 5.05 5.25 5.5 4.05 C5.5 4.05 6.95 4.05 8.85 5.4 C10.85 4.9 13.15 4.9 15.15 5.4 C17.05 4.05 18.5 4.05 18.5 4.05 C18.95 5.25 18.95 6.5 18.65 7.3 C19.5 8.2 20 9.35 20 10.75 C20 15.05 17.5 16.25 14.3 16.6 C14.8 17.0 15.15 17.8 15.15 19 V21.6" ${S} stroke="currentColor"/><path d="M9 19.6 C6.6 20.3 5.6 18.7 4.4 18.3" ${S} stroke="currentColor"/></svg>`,
+  bluesky:  `<svg viewBox="0 0 24 24"><path d="M12 10.9 C10.5 7.9 6.6 3.6 4.4 4.3 C2.6 4.9 2.9 8.5 3.3 10.5 C3.7 12.5 5.6 13.3 7.4 13.1 C5.4 13.6 4.5 14.9 5.5 16.6 C6.7 18.6 9.7 18 12 13.7 C14.3 18 17.3 18.6 18.5 16.6 C19.5 14.9 18.6 13.6 16.6 13.1 C18.4 13.3 20.3 12.5 20.7 10.5 C21.1 8.5 21.4 4.9 19.6 4.3 C17.4 3.6 13.5 7.9 12 10.9 Z" fill="currentColor"/></svg>`,
+  mastodon: `<svg viewBox="0 0 24 24"><path d="M12 3.2 C6.9 3.2 5 5.3 5 9.2 V14.2 C5 17.1 6.6 18.6 9.1 19.1 C11.1 19.5 14 19.4 16.1 18.9 V16.9 C14 17.4 11.6 17.5 10.1 17.1 C8.7 16.7 8.1 15.9 8.1 14.6 C10.6 15.1 13.6 15.1 16.1 14.6 C18.1 14.2 19 12.6 19 10.1 V9.2 C19 5.3 17.1 3.2 12 3.2 Z" ${S} stroke="currentColor"/><path d="M8.9 12.4 V9.2 C8.9 7.7 11.1 7.3 12 9.1 C12.9 7.3 15.1 7.7 15.1 9.2 V12.4" ${S} stroke="currentColor"/></svg>`,
+  cube:     `<svg viewBox="0 0 24 24"><path d="M12 2.9 L20.2 7.5 V16.5 L12 21.1 L3.8 16.5 V7.5 Z" ${S} stroke="currentColor"/><path d="M12 12 L20.2 7.5 M12 12 L3.8 7.5 M12 12 V21.1" ${S} stroke="currentColor"/></svg>`,
+  link:     `<svg viewBox="0 0 24 24"><path d="M10 13.5 A4 4 0 0 0 15.7 13.5 L18.4 10.8 A4 4 0 0 0 12.7 5.1 L11.4 6.4" ${S} stroke="currentColor"/><path d="M14 10.5 A4 4 0 0 0 8.3 10.5 L5.6 13.2 A4 4 0 0 0 11.3 18.9 L12.6 17.6" ${S} stroke="currentColor"/></svg>`,
+};
+
+/* ══════════════════════════════════════════════════════════════════════
+   ENGINE — you shouldn't need to touch anything past this line.
+   ══════════════════════════════════════════════════════════════════════ */
+
+(function () {
+  'use strict';
+
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+  const N       = LINKS.length;
+  const TWO_PI  = Math.PI * 2;
+  const STEP    = TWO_PI / N;
+  const RAD     = CONFIG.TILT * Math.PI / 180;
+  const SIN_T   = Math.sin(RAD);
+  const COS_T   = Math.cos(RAD);
+  const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const stage   = document.getElementById('stage');
+  const system  = document.getElementById('system');
+  const track   = document.getElementById('scrollTrack');
+  const body    = document.body;
+
+  let R = 560;                 // orbit radius, recalculated on resize
+  let sats = [];               // { el, pod, data, phase }
+  let ticks = [];
+  let pos = 0;                 // smoothed orbital position
+  let scrollTarget = 0;        // where the scrollbar says we should be
+  let hoverTarget = null;      // nav preview override
+  let live = -1;               // index currently in focus
+  let maxScroll = 1;
+
+  /* ── swap in a custom planet image if one was configured ── */
+  if (CONFIG.PLANET_IMAGE) {
+    const p = document.getElementById('planet');
+    p.innerHTML = '<img src="' + CONFIG.PLANET_IMAGE + '" alt="Periapses" ' +
+                  'style="width:100%;height:100%;display:block;border-radius:50%;object-fit:cover">';
+  }
+
+  /* ── build satellites ── */
+  function buildSatellites() {
+    const frag = document.createDocumentFragment();
+    LINKS.forEach(function (link, i) {
+      const sat = document.createElement('div');
+      sat.className = 'sat';
+
+      const pod = document.createElement('a');
+      pod.className = 'pod';
+      pod.href = link.url;
+      pod.target = '_blank';
+      pod.rel = 'noopener noreferrer';
+      pod.setAttribute('aria-label', link.name + ' — ' + (link.handle || ''));
+      pod.style.setProperty('--accent', link.color || '#4ca3ff');
+      pod.innerHTML =
+        '<span class="glyph">' + (ICONS[link.icon] || ICONS.link) + '</span>' +
+        '<span class="tag">' + escapeHtml(link.name) + '</span>';
+
+      sat.appendChild(pod);
+      frag.appendChild(sat);
+      sats.push({ el: sat, pod: pod, data: link, phase: Math.random() * TWO_PI });
+    });
+    system.appendChild(frag);
+  }
+
+  /* ── build the faint dotted orbit path (placed once) ── */
+  function buildTrack() {
+    const frag = document.createDocumentFragment();
+    const COUNT = 132;
+    for (let i = 0; i < COUNT; i++) {
+      const d = document.createElement('div');
+      d.className = 'tick';
+      frag.appendChild(d);
+      ticks.push({ el: d, t: (i / COUNT) * TWO_PI });
+    }
+    system.appendChild(frag);
+  }
+
+  function layoutTrack() {
+    ticks.forEach(function (tk) {
+      const p = place(tk.t);
+      tk.el.style.transform =
+        'translate3d(' + p.x.toFixed(1) + 'px,' + p.y.toFixed(1) + 'px,' + p.z.toFixed(1) + 'px)';
+      tk.el.style.opacity = (0.05 + p.depth * 0.30).toFixed(3);
+      tk.el.style.zIndex  = Math.round(1000 + p.z);
+    });
+  }
+
+  /* ── the orbit itself ──
+     theta = 0 puts a satellite front-and-centre, closest to the camera.
+     Increasing theta walks it leftward across the front of the planet,
+     out of frame, around the back, and in again from the right.        */
+  function place(theta) {
+    const px = -R * Math.sin(theta);
+    const pz =  R * Math.cos(theta);
+    return {
+      x: px,
+      y: pz * SIN_T,
+      z: pz * COS_T,
+      depth: (pz + R) / (2 * R)      // 0 = far side, 1 = nearest
+    };
+  }
+
+  /* ── scroll → orbital position, with a dwell so links park and float ── */
+  function ease(v) {
+    const i = Math.floor(v);
+    const f = v - i;
+    const d = Math.min(0.45, Math.max(0, CONFIG.DWELL));
+    let t = (f - d) / (1 - 2 * d);
+    t = t < 0 ? 0 : t > 1 ? 1 : t;
+    return i + t * t * (3 - 2 * t);
+  }
+
+  function readScroll() {
+    maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    let y = window.scrollY || window.pageYOffset;
+
+    if (CONFIG.LOOP) {
+      // one full page of scroll == one full revolution, so the top and the
+      // bottom describe the identical scene. Jumping between them is invisible.
+      if (y >= maxScroll - 1)      { window.scrollTo(0, 1);             y = 1; }
+      else if (y <= 0)             { window.scrollTo(0, maxScroll - 1); y = maxScroll - 1; }
+    }
+
+    scrollTarget = ease((y / maxScroll) * N);
+    body.classList.toggle('scrolled', y > 40 && y < maxScroll - 40);
+  }
+
+  /* ── nearest equivalent index, so previews take the short way round ── */
+  function nearest(index, from) {
+    let best = index, bestD = Infinity;
+    for (let k = -2; k <= 2; k++) {
+      const cand = index + k * N;
+      const d = Math.abs(cand - from);
+      if (d < bestD) { bestD = d; best = cand; }
+    }
+    return best;
+  }
+
+  /* ── main loop ── */
+  function frame(now) {
+    const t = now * 0.001;
+    const aim = hoverTarget !== null ? nearest(hoverTarget, pos) : scrollTarget;
+
+    pos += (aim - pos) * (REDUCED ? 1 : CONFIG.GLIDE);
+
+    let bestIdx = 0, bestAbs = Infinity;
+
+    for (let i = 0; i < N; i++) {
+      const s = sats[i];
+      let th = (pos - i) * STEP;
+      th = ((th % TWO_PI) + TWO_PI + Math.PI) % TWO_PI - Math.PI;   // wrap to −π..π
+
+      const p = place(th);
+      const bob = REDUCED ? 0 : Math.sin(t * 0.7 + s.phase) * 9 * (0.35 + p.depth * 0.65);
+      const sway = REDUCED ? 0 : Math.cos(t * 0.5 + s.phase) * 5;
+
+      s.el.style.transform =
+        'translate3d(' + (p.x + sway).toFixed(1) + 'px,' +
+                         (p.y + bob).toFixed(1)  + 'px,' +
+                          p.z.toFixed(1)         + 'px)';
+      s.el.style.zIndex = Math.round(1000 + p.z);
+
+      // far side: shrink away, dim, and defocus
+      const far = 1 - p.depth;
+      s.pod.style.opacity = (0.12 + p.depth * 0.88).toFixed(3);
+      s.pod.style.filter  = far > 0.55 ? 'blur(' + ((far - 0.55) * 7).toFixed(1) + 'px)' : 'none';
+      s.pod.style.pointerEvents = p.depth > 0.45 ? 'auto' : 'none';
+
+      const a = Math.abs(th);
+      if (a < bestAbs) { bestAbs = a; bestIdx = i; }
+    }
+
+    if (bestIdx !== live) { live = bestIdx; setFocus(bestIdx); }
+
+    requestAnimationFrame(frame);
+  }
+
+  /* ── the bottom readout follows whichever link is parked out front ── */
+  const rIdx = document.getElementById('rIdx');
+  const rName = document.getElementById('rName');
+  const rHandle = document.getElementById('rHandle');
+  const rGo = document.getElementById('rGo');
+
+  function setFocus(i) {
+    const link = LINKS[i];
+    sats.forEach(function (s, k) { s.el.classList.toggle('live', k === i); });
+
+    document.documentElement.style.setProperty('--accent', link.color || '#4ca3ff');
+    rIdx.textContent = pad(i + 1) + ' / ' + pad(N);
+    rName.textContent = link.name;
+    rHandle.textContent = link.handle || '';
+    rGo.href = link.url;
+
+    [rName, rHandle].forEach(function (el) {
+      el.classList.remove('swap');
+      void el.offsetWidth;               // restart the animation
+      el.classList.add('swap');
+    });
+  }
+
+  /* ── nav panel ── */
+  function buildNav() {
+    const rows = document.getElementById('navRows');
+    document.getElementById('navCount').textContent = pad(N);
+
+    LINKS.forEach(function (link, i) {
+      const a = document.createElement('a');
+      a.className = 'row';
+      a.href = link.url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.style.setProperty('--accent', link.color || '#4ca3ff');
+      a.innerHTML =
+        '<span class="ic">' + (ICONS[link.icon] || ICONS.link) + '</span>' +
+        '<span class="txt"><span class="t1">' + escapeHtml(link.name) + '</span>' +
+        '<span class="t2">' + escapeHtml(link.handle || '') + '</span></span>';
+
+      // hovering a row flies the orbit to that link as a live preview
+      a.addEventListener('mouseenter', function () {
+        hoverTarget = i;
+        sats[i].el.classList.add('flag');
+      });
+      a.addEventListener('mouseleave', function () {
+        hoverTarget = null;
+        sats[i].el.classList.remove('flag');
+      });
+      rows.appendChild(a);
+    });
+  }
+
+  /* ── starfield: three parallax layers, gentle twinkle ── */
+  const canvas = document.getElementById('stars');
+  const ctx = canvas.getContext('2d');
+  let stars = [], dpr = 1, cw = 0, ch = 0;
+  let mx = 0, my = 0, tmx = 0, tmy = 0;
+
+  function seedStars() {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    cw = window.innerWidth; ch = window.innerHeight;
+    canvas.width = cw * dpr; canvas.height = ch * dpr;
+    canvas.style.width = cw + 'px'; canvas.style.height = ch + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const count = Math.round((cw * ch) / 5200);
+    stars = [];
+    for (let i = 0; i < count; i++) {
+      const layer = i % 3;
+      stars.push({
+        x: Math.random() * cw,
+        y: Math.random() * ch,
+        r: (layer === 2 ? 1.5 : layer === 1 ? 1.05 : 0.65) * (0.6 + Math.random() * 0.7),
+        a: 0.2 + Math.random() * 0.6,
+        sp: 0.4 + Math.random() * 1.4,
+        ph: Math.random() * TWO_PI,
+        px: (layer + 1) * 7
+      });
+    }
+  }
+
+  function paintStars(t) {
+    ctx.clearRect(0, 0, cw, ch);
+    for (let i = 0; i < stars.length; i++) {
+      const s = stars[i];
+      const tw = REDUCED ? 1 : 0.62 + Math.sin(t * s.sp + s.ph) * 0.38;
+      const x = s.x + mx * s.px;
+      const y = s.y + my * s.px;
+      ctx.globalAlpha = s.a * tw;
+      ctx.fillStyle = s.r > 1.2 ? '#cfe6ff' : '#ffffff';
+      ctx.beginPath();
+      ctx.arc(x, y, s.r, 0, TWO_PI);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+  }
+
+  function starLoop(now) {
+    mx += (tmx - mx) * 0.05;
+    my += (tmy - my) * 0.05;
+    paintStars(now * 0.001);
+    requestAnimationFrame(starLoop);
+  }
+
+  /* ── pointer parallax on the whole scene ── */
+  function onPointer(e) {
+    const nx = (e.clientX / window.innerWidth  - 0.5);
+    const ny = (e.clientY / window.innerHeight - 0.5);
+    tmx = -nx * 2; tmy = -ny * 2;
+    stage.style.perspectiveOrigin = (50 + nx * 6).toFixed(1) + '% ' + (46 + ny * 5).toFixed(1) + '%';
+  }
+
+  /* ── sizing ── */
+  function resize() {
+    const vw = window.innerWidth, vh = window.innerHeight;
+    R = Math.max(240, Math.min(620, vw * 0.40, vh * 0.78));
+    const planet = Math.max(190, Math.min(420, Math.min(vw, vh) * 0.42));
+    document.documentElement.style.setProperty('--planet', planet + 'px');
+    track.style.height = ((N + 1) * 100) + 'vh';
+    seedStars();
+    layoutTrack();
+    readScroll();
+  }
+
+  /* ── keyboard: arrows / page keys nudge one slot at a time ── */
+  function onKey(e) {
+    const seg = maxScroll / N;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'PageDown') {
+      e.preventDefault(); window.scrollBy({ top: seg, behavior: 'smooth' });
+    } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft' || e.key === 'PageUp') {
+      e.preventDefault(); window.scrollBy({ top: -seg, behavior: 'smooth' });
+    } else if (e.key === 'Enter' && document.activeElement === document.body) {
+      window.open(LINKS[live].url, '_blank', 'noopener');
+    }
+  }
+
+  /* ── helpers ── */
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  /* ── go ── */
+  buildSatellites();
+  buildTrack();
+  buildNav();
+  resize();
+  setFocus(0);
+  live = 0;
+  pos = scrollTarget;
+
+  window.addEventListener('scroll', readScroll, { passive: true });
+  window.addEventListener('resize', resize);
+  window.addEventListener('keydown', onKey);
+  window.addEventListener('pointermove', onPointer, { passive: true });
+
+  requestAnimationFrame(frame);
+  requestAnimationFrame(starLoop);
+})();
+</script>
+</body>
+</html>
